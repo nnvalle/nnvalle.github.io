@@ -1,6 +1,5 @@
 header {
     background-image: url(yarnHero.jpg);
-
     background-size: cover;
     color: #cac3f9;
     text-shadow: 4px 4px #620d8d;
@@ -9,7 +8,10 @@ header {
     font-size: 200%;
     letter-spacing: 2px;
 }
-
+header h1 a {
+    color: inherit;
+    text-decoration: none;
+}
 nav {
     font-weight: bold;
     padding: 15px;
@@ -81,10 +83,16 @@ section {
     flex: 1;
 }
 
-.flow {
+.flowBeginner {
     display: flex;
     flex-direction: row;
     gap: 40px;
+    
+}
+.flowBeginner img {
+    width: 100%;
+    height: auto;
+    
 }
 
 footer {
@@ -205,22 +213,14 @@ tr {
 }
 
 .yarnlabel {
-    text-align: left;
     margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 3em;
     border: 6px solid #edb6e3;
     border-radius: 10px;
+     max-width: 100%;  
+     height: auto;    
 }
 
-.yarnTopLabelInfo {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-top: 20px;
-    margin-left: 3em;
-    margin-right: 3em;
-}
+
 .yarnlabelText {
     font-size: 1.2em;
     color: #000000;
@@ -228,18 +228,22 @@ tr {
     line-height: 1.5;
     font-weight: normal;
 }
+
 main h2 {
-    margin-left : 1em;
+    margin-left: 1em;
 
 }
+
 main li::marker {
     color: #620d8d;
 }
+
 video {
     border: 4px solid #620d8d;
     border-radius: 10px;
     margin-left: 1em;
 }
+
 .supplies-image {
     width: 480px;
     height: 380px;
@@ -248,12 +252,126 @@ video {
     border: 6px solid #620d8d;
     border-radius: 10px;
 }
+
 .hooks-image {
     width: 450px;
     height: 380px;
     border: 6px solid #620d8d;
     border-radius: 10px;
 }
+
+#petsTitle {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#freepatternsTitle {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#homeTitle {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contactForm {
+    max-width: 700px;
+    
+    margin: 30px auto;
+    padding: 24px;
+    border: 2px solid #620d8d;
+    border-radius: 10px;
+    background-color: #cac3f9;
+}
+
+.contactForm h2 {
+    margin-top: 0;
+    color: #2d1b4e;
+}
+
+
+.form-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 24px;
+    
+}
+
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select,
+textarea {
+    margin-bottom: 1em;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #620d8d;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.form-image {
+    flex: 0 0 220px;
+    text-align: center;
+}
+
+.form-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+textarea {
+    resize: none;
+    font-family: georgia, "Times New Roman", Times, serif;
+}
+
+
+.submit-btn {
+    background-color: #620d8d;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #4a096c;
+}
+.yarnPage {
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width: 800px) {
+    .form-content {
+        flex-direction: column;
+    }
+
+    .gallery-container {
+        flex-direction: column;
+    }
+
+    .flowBeginner {
+        flex-direction: column;
+    }
+    .yarnPage {
+        flex-direction: column;
+    }
+}
+
 * {
     box-sizing: border-box;
 
